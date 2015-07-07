@@ -2,7 +2,7 @@
 
 (n.) The thinning ending of a stroke ([fontshop](https://www.fontshop.com/glossary#taper))
 
-Taper is a quick and dirty way of rendering a type hierarchy in the browser. It's a great way to find pairings tha work well together.
+Taper is a quick and dirty way of rendering a type hierarchy in the browser. It's a great way to find pairings that work well together in a browser.
 
 ## Setup
 
