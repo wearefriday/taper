@@ -1,0 +1,12 @@
+{
+  "name": "taper",
+  "description": "Taper",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.9",
+    "gulp-sass": "^2.0.3",
+    "gulp-serve": "^1.0.0"
+  }
+}

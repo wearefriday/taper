@@ -1,0 +1,49 @@
+@mixin font-size($size) {
+  font-size: #{$size}px;
+  font-size: #{$size / 10}rem;
+}
+
+$font-families: (
+  light: 'Avenir Light',
+  roman: 'Avenir Roman',
+  black: 'Avenir Black'
+);
+
+$font-sizes: (
+  xsmall: (font-size: 12, line-height: 18),
+  small: (font-size: 16, line-height: 20),
+  medium: (font-size: 18, line-height: 22),
+  large: (font-size: 24, line-height: 30),
+  xlarge: (font-size: 36, line-height: 42),
+);
+
+// this allows us to tweak letter spacing for a specific family/size combination
+$font-tweaks: (
+  light-large: (letter-spacing: -.02em),
+  light-xlarge: (letter-spacing: -.04em),
+);
+
+@each $font-family-name, $fony-family-properties in $font-families {
+  @each $font-size, $font-size-properties in $font-sizes {
+
+    %font-#{$font-family-name}-#{$font-size},
+    .font-#{$font-family-name}-#{$font-size} {
+      @include font-size(map-get($font-size-properties, font-size));
+      font-family: map-get($font-families, $font-family-name);
+      line-height: map-get($font-size-properties, line-height) + px;
+
+      $tweaks: map-get($font-tweaks, #{$font-family-name}-#{$font-size});
+
+      @if $tweaks {
+        letter-spacing: map-get($tweaks, letter-spacing);
+      }
+    }
+
+    %font-#{$font-family-name}-#{$font-size}-caps,
+    .font-#{$font-family-name}-#{$font-size}-caps {
+      @extend %font-#{$font-family-name}-#{$font-size};
+      text-transform: uppercase;
+    }
+
+  }
+}
