@@ -37,7 +37,7 @@ $(function() {
 
   var save = function() {
     sessionStorage[storage_key] = textarea.val();
-  }
+  };
 
   var fill_code = function() {
     var html = output.html();
@@ -46,7 +46,7 @@ $(function() {
     html = html.replace(/ selected"/igm, '"');
     textarea.val(html);
     save();
-  }
+  };
 
   textarea.on('keyup', function() {
     output.html($(this).val());
