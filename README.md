@@ -4,6 +4,8 @@
 
 Taper is a quick and dirty way of rendering a type hierarchy in the browser. It's a great way to find pairings that work well together in a browser.
 
+[Read the blog post](https://medium.com/friday-people/bridging-the-photoshop-divide-aa1a85decb38) that describes its reason for being.
+
 ## Setup
 
 * Clone the repo
